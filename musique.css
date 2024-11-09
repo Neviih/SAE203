@@ -1,0 +1,407 @@
+/*-----------------------------------------------------*/
+/*----------------------- FONTS -----------------------*/
+
+@font-face {
+    font-family: 'Title';
+    src: url(../fonts/Menda\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Subtitle';
+    src: url(../fonts/Roxborough\ CF.ttf);
+}
+
+/*-----------------------------------------------------*/
+/*----------------------- BASE -----------------------*/
+
+header {
+    position: relative;
+    padding: 15%;
+    text-align: center;
+    font-size: xx-large;
+    color: #ffffff;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/background/musique.jpg);
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1 {
+    font-family: 'Title';
+}
+
+header p {
+    font-family: 'Subtitle';
+}
+
+section {
+    background-color: rgb(143, 143, 143);
+    padding: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/*-------------------- NAVIGATION --------------------*/
+
+.nav-musique {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: white;
+    padding: 5px 0;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: medium;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-musique ul {
+    display: flex;
+
+    list-style: none;
+    padding: 0; /* Enlève le remplissage par défaut */
+    margin: 0; /* Enlève la marge par défaut */
+}
+
+.nav-musique ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.nav-musique ul li a {
+    border-radius: 0px;
+    border-style: none;
+}
+
+.nav-musique a:hover {
+    color:black;
+    background-color: transparent;
+}
+
+
+/*-----------------------------------------------------*/
+/*-------------------- ARTISTE FAV --------------------*/
+
+.artiste-fav {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+        url(../images/background/txt.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-size: cover;
+    margin-top: 0%;
+    padding-top: 15%;
+    margin-bottom: 0%;
+}
+
+.artiste-fav h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+}
+
+.artiste-fav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color:#ffffff;
+}
+
+.artiste-fav-container h2{
+    font-size: xx-large;
+    font-family: 'Title';
+    margin-bottom: 15%;
+    
+}
+
+.artiste-fav-container h3{
+    font-size: xx-large;
+    font-style: oblique;
+    font-family: 'Title';
+}
+
+.artiste-fav-container p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:larger;
+    width: 800px;
+    text-align: center;
+}
+
+.txt-img-container {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.txt-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+/*-------------------- ALBUMS ARTISTE FAV --------------------*/
+
+.carousel {
+    width: 60%;
+    margin: 15px auto;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: justify;
+}
+
+.album-item {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+.album-img-container{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.album-item img {
+    width: 100%;
+    height: auto;
+}
+
+.album-item h1 {
+    text-align: center;
+}
+
+.album-text {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+    width: 85%;
+    text-align: justify;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*------------------------------------------------------------*/
+/*--------------------- AUTRES ARTISTES ---------------------*/
+
+.autres-artistes {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../images/background/artistes.jpg);
+    background-position: 50% 32%;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    margin:0%;
+    padding: 10%;
+}
+
+.autres-artistes h2 {
+    font-family: 'Title';
+    font-size: xx-large;
+    color: #ffffff;
+}
+
+.artistes-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));;
+    gap: 15px;
+}
+
+.artistes-item {
+    width: 225px;
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.artistes-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.artistes-item:hover img {
+    transform: scale(1.25);
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Subtitle';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.artistes-item:hover .overlay {
+    opacity: 1;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    z-index: 1000;
+}
+
+.popup h3 {
+    font-family: 'Title';
+}
+
+.popup p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/*------------------------------------------------------------*/
+/*------------------------- MUSIQUES -------------------------*/
+
+.musiques {
+    margin:0%;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.0)),
+        url(../images/background/musiques.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-size: cover;
+}
+
+.musiques h2 {
+    font-family: 'Title';
+    font-size: xx-large;
+    color:#ffffff;
+}
+
+.musiques h3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+td {
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.music-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    height: 100%;
+}
+
+.music-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 80%;
+}
+
+.music-genres {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.8em;
+    color: #666;
+    width: 80%;
+}
+
+iframe {
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    height: 100px;
+}
+
+
+/*------------------------------------------------------------*/
+/*------------------------- RESPONSIVE -------------------------*/
+
+@media (max-width: 910px) {
+
+    .artiste-fav-container p, .album-text {
+        width: 100%;
+    }
+
+    .txt-img-container, .carousel {
+        width: 90%;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+    }
+
+    thead, tbody, tr, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    td, th {
+        text-align: left;
+        padding: 8px;
+        font-size: 1em;
+    }
+}

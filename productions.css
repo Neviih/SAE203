@@ -1,0 +1,128 @@
+/*-----------------------------------------------------*/
+/*----------------------- FONTS -----------------------*/
+
+@font-face {
+    font-family: 'Title';
+    src: url(../fonts/Menda\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Subtitle';
+    src: url(../fonts/Roxborough\ CF.ttf);
+}
+
+/*-----------------------------------------------------*/
+/*----------------------- BASE -----------------------*/
+
+header {
+    position: relative;
+    padding: 15%;
+    text-align: center;
+    font-size: xx-large;
+    color: #ffffff;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/background/productions.jpg);
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1 {
+    font-family: 'Title';
+}
+
+header p {
+    font-family: 'Subtitle';
+}
+
+
+/*-------------------- NAVIGATION --------------------*/
+
+.nav-productions {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: white;
+    padding: 5px 0;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: medium;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-productions ul {
+    display: flex;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-productions ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.nav-productions ul li a {
+    border-radius: 0px;
+    border-style: none;
+}
+
+.nav-productions a:hover {
+    color:black;
+    background-color: transparent;
+}
+
+/*----------------------------------------------------*/
+/*----------------------- SELF BRANDING -----------------------*/
+
+.branding {
+    width: 90%;
+    border: 1px solid;
+    margin: 10% 0%;
+    justify-self: center;
+}
+
+.branding h2 {
+    font-family: 'Title';
+    font-size: xx-large;
+    text-align: center;
+}
+
+.branding-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 5%;
+}
+
+.productions-item {
+    width: 25%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-align: center;
+    padding: 20px;
+}
+
+.productions-item:hover {
+    transform: translateY(-10px);
+}
+
+.productions-img-container {
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.productions-img-container img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}

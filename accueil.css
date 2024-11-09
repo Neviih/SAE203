@@ -1,0 +1,154 @@
+/*--------------------------------------------------*/
+/*--------------------- FONTS ---------------------*/
+
+@font-face {
+    font-family: 'Title';
+    src: url(../fonts/Menda\ Semibold.ttf);
+}
+
+@font-face {
+    font-family: 'Subtitle';
+    src: url(../fonts/Roxborough\ CF.ttf);
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/*--------------------------------------------------*/
+/*--------------------- HEADER ---------------------*/
+
+
+/* BLOC DE PRÉSENTATION */
+header {
+    display: flex; /* mise en page flexbox */
+    flex-direction: row; /* éléments du header -> à l'horizontale */
+    justify-content: space-around; /* éléments espacés uniformément */
+    justify-self: center; /* centre le header verticalement */
+    align-items: stretch; /* éléments du header s'étirent pour occuper toute la largeur */
+
+    width: 80%; /* laisse 20% d'espae vide de chaque côté */
+    margin: 5% 0%; /* marge de 5% en haut/en bas */
+}
+
+/* TITRE DU HEADER */
+header h1 {
+    font-family: 'Title'; /* applique la police définie grâce à @font-face */
+}
+
+/* CONTENEUR DE L'IMAGE D'ACCUEIL, À GAUCHE */
+.image-container {
+    display: flex;
+    align-items: center; /* image centrée verticalement */
+
+    flex: 1; /* le container de l'image prend l'espace restant disponible dans le header */
+    max-width: 40%; /* largeur maximale fixée à 40% de la largeur du header */
+}
+
+/* L'IMAGE D'ACCUEIL */
+.img_intro {
+    width: 100%;
+    height: auto; /* hautur de l'image ajustée automatiquement pour conserver ses proportions */
+}
+
+/* BLOC DE PRÉSENTATION, À DROITE */
+.nevii_blog {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+/* PRÉSENTATION TEXTUELLE */
+.nevii_blog p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*--------------------------------------------------*/
+/*-------------------- QUALITÉS --------------------*/
+
+/* ANIMATION : FADE */
+@keyframes fade {
+    5%, 16% { opacity: 1; } /* élément visible */
+    25%, 95% { opacity: 0; } /* et il disparait */
+}
+
+/* CONTENEUR DE MES QUALITÉS */
+.qualites {
+    height: 5em; /* la hauteur du conteneur est 5 fois la taille de la police utilisée */
+
+    font-family: 'Subtitle';
+    font-weight: bolder; /* rend la police plus épaisse */
+}
+
+/* CHAQUE QUALITÉ */
+.qualite {
+    position: absolute; /* qualités positionnées à l'intérieur du conteneur */
+    opacity: 0; /* chaque qualité est invisible par défaut */
+    animation: fade 12s infinite; /* apparait et disparait toutes les 12 secondes parce que 6 qualités */
+    font-size: 250%; /* agrandit plus la police */
+}
+
+/* ANIMATION SPÉCIFIQUE À CHAQUE QUALITÉ */
+.qualite:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.qualite:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.qualite:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.qualite:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.qualite:nth-child(5) {
+    animation-delay: 8s;
+}
+
+.qualite:nth-child(6) {
+    animation-delay: 10s;
+}
+
+
+/*----------------------------------------------------*/
+/*-------------------- RESPONSIVE --------------------*/
+
+/* Aide de ChatGPT */
+/* Pour les écrans jusqu'à 770px */
+@media (max-width: 770px) {
+    header {
+        flex-direction: column; /* le header passe en disposition verticale */
+        align-items: center;
+    }
+
+    .image-container {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .nevii_blog {
+        flex: none;
+        text-align: center;
+    }
+
+    .qualites {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Aide de ChatGPT */
+/* Pour les écrans jusqu'à 480px */
+@media (max-width: 480px) {
+    .qualite {
+        font-size: 200%;
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+}

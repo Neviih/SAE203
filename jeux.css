@@ -1,0 +1,186 @@
+/*-----------------------------------------------------*/
+/*----------------------- FONTS -----------------------*/
+
+@font-face {
+    font-family: 'Title';
+    src: url(../fonts/Menda\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Subtitle';
+    src: url(../fonts/Roxborough\ CF.ttf);
+}
+
+/*------------------------------------------------------*/
+/*----------------------- HEADER -----------------------*/
+
+header {
+    position: relative;
+    padding: 15%;
+    text-align: center;
+    font-size: xx-large;
+    color: #ffffff;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/background/jeux.jpg);
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1 {
+    font-family: 'Title';
+}
+
+header p {
+    font-family: 'Subtitle';
+}
+
+/*----------------------------------------------------*/
+/*-------------------- NAVIGATION --------------------*/
+
+.nav-jeux {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: white;
+    padding: 5px 0;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: medium;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-jeux ul {
+    display: flex;
+
+    list-style: none;
+    padding: 0; /* Enlève le remplissage par défaut */
+    margin: 0; /* Enlève la marge par défaut */
+}
+
+.nav-jeux ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.nav-jeux ul li a {
+    border-radius: 0px;
+    border-style: none;
+}
+
+.nav-jeux a:hover {
+    color:black;
+    background-color: transparent;
+}
+
+/*------------------------------------------------------*/
+/*----------------------- GENRES -----------------------*/
+
+.genres {
+    width: 90%;
+    border: 1px solid;
+    margin: 10% 0%;
+    justify-self: center;
+}
+
+.genres-container {
+    display: flex;         
+    flex-wrap: wrap;       
+    justify-content: space-around;
+    gap: 20px;             
+    margin-top: 20px;
+    padding: 5% 5%;
+}
+
+.genres h2 {
+    font-family: 'Title';
+    font-size: xx-large;
+    text-align: center;
+}
+
+.genres h3 {
+    font-family: 'Subtitle';
+}
+
+.genres-item {
+    text-align: center;
+    width: 23%;
+}
+
+.genres-img-container img {
+    width: 80%;
+    height: auto;
+    border-radius: 100%;
+    border: 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ;
+}
+
+.genres-img-container img:hover {
+    transform: translateY(-10px);
+}
+
+/*----------------------------------------------------*/
+/*----------------------- JEUX -----------------------*/
+
+.jeux {
+    width: 90%;
+    border: 1px solid;
+    margin: 10% 0%;
+    justify-self: center;
+}
+
+.jeux h2 {
+    font-family: 'Title';
+    font-size: xx-large;
+    text-align: center;
+}
+
+.jeux-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 5%;
+}
+
+.jeux-item {
+    width: 25%;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-align: center;
+    padding: 20px;
+}
+
+.jeux-item:hover {
+    transform: translateY(-10px);
+}
+
+.jeux-item h3 {
+    font-family: 'Subtitle';
+    font-size: x-large;
+}
+
+.jeux-item p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: small;
+}
+
+.jeux-img-container {
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.jeux-img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

@@ -1,0 +1,369 @@
+/*-----------------------------------------------------*/
+/*----------------------- FONTS -----------------------*/
+
+@font-face {
+    font-family: 'Title';
+    src: url(../fonts/Menda\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Subtitle';
+    src: url(../fonts/Roxborough\ CF.ttf);
+}
+
+/*-----------------------------------------------------*/
+/*----------------------- BASE -----------------------*/
+
+header {
+    position: relative;
+    padding: 15%;
+    text-align: center;
+    font-size: xx-large;
+    color: #ffffff;
+
+    /* Image de fond: opacité baissée pour mettre en valeur le titre */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/background/animemanga.jpg);
+    background-position: 50% 30%; /* centre verticalement et se positionne 30% vers le haut */
+    background-repeat: no-repeat; /* l'image de fond ne se répète pas */
+    background-size: cover; /* l'image de fond occupe l'entièreté du header */
+}
+
+header h1 {
+    font-family: 'Title';
+}
+
+header p {
+    font-family: 'Subtitle';
+}
+
+
+/*-------------------- NAVIGATION --------------------*/
+
+/* CONTENEUR DE LA NAVIGATION DE LA PAGE */
+.nav-anime {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: white;
+    padding: 5px 0;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    position: sticky; /* la navigation reste visible, même lors du scroll */
+    top: 0; /* colle la navigation au haut de la page */
+    z-index: 1000; /* centre la navigation verticalement */
+    font-size: medium;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* CONTENEUR DES LIENS DE NAVIGATION */
+.nav-anime ul {
+    display: flex;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* CHAQUE CONTENEUR DE LIEN DE LA NAVIGATION */
+.nav-anime ul li {
+    display: inline; /* positionne les éléments de la nav sur une ligne */
+    margin: 0 20px;
+}
+
+/* CHAQUE LIEN DE NAVIGATION */
+/* supprime les styles pour ne pas se confondre avec ceux 
+    de la navigation du site web */
+.nav-anime ul li a {
+    border-radius: 0px;
+    border-style: none;
+}
+
+/* LORS DU SURVOL DE CHAQUE LIEN ... */
+/* ne change pas le style pour ne pas se confondre 
+    avec ceux de la navigation du site web */
+.nav-anime a:hover {
+    color:black;
+    background-color: transparent;
+}
+
+
+/*-------------------------------------------------------*/
+/*----------------------- CIBLES -----------------------*/
+
+/* SECTION DES CIBLES EDITORIALES */
+.cibles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    margin: 6%;
+    padding: 15% 0%;
+
+    border: 1px solid;
+}
+
+.cibles h2 {
+    font-family:'Title';
+    font-size: xx-large;
+    margin-top: 0%;
+}
+
+/* CONTENEUR DES CIBLES */
+.cibles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ITEM DE CHAQUE CIBLE (image, titre, description) */
+.cibles-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 250px;
+    border: 0.5px solid;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* LORS DU SURVOL DE CHAQUE ITEM */
+.cibles-item:hover {
+    transform: translateY(-8px);
+}
+
+/* CONTENEUR DE CHAQUE IMAGE*/
+.cibles-img-container {
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* IMAGE DE CHAQUE CIBLE */
+.cibles-item img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: 50% 10%; 
+}
+
+.cibles-item h3 {
+    font-family:'Subtitle';
+    font-size: x-large;
+    color: #333;
+    margin-bottom: 0%;
+}
+
+.cibles-item p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 8%;
+}
+
+/* POPUP: IMAGE AFFICHÉE AU CLIC */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    height: 500px;
+}
+
+/* IMAGE DU POPUP */
+.popup img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* STYLE DU BOUTON POUR FERMER LE POPUP */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------*/
+/*----------------------- ANIME FAV -----------------------*/
+
+/* SECTION DE MES ANIME FAVORIS*/
+.animefav {
+    padding: 5%;
+    border: 1px solid;
+    margin: 5%;
+}
+
+.animefav h2 {
+    font-family: 'Title';
+    font-size: xx-large;
+    text-align: center;
+}
+
+/* CONTENEUR DES ANIME FAVORIS*/
+.animefav-container {
+    width: 60%;
+    margin: 15px auto;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: justify;
+    border-radius: 8px;
+}
+
+/* ITEM DE CHAQUE ANIME FAVORI (image, titre, description) */
+.animefav-item {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+/* IMAGE DE CHAQUE ITEM */
+.animefav-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.animefav-item h3 {
+    font-family: 'Subtitle';
+    font-size: xx-large;
+    text-align: center;
+}
+
+.animefav-item p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+}
+
+/* CONTENEUR DE L'IMAGE DE CHAQUE ITEM */
+.animefav-img-container{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    perspective: 1000px;
+}
+
+/* IMAGE DE CHAQUE ANIME FAVORI */
+.animefav-img-container img{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    perspective: 1000px;
+}
+
+
+/*------------------------------------------------------------*/
+/*----------------------- AUTRES ANIME -----------------------*/
+
+/* SECTION DES AUTRES ANIME */
+.anime {
+    padding: 5% 0%;
+
+    border: 1px solid;
+    margin: 10% 5% 10% 5%;
+}
+
+/* CAROUSEL DES AUTRES ANIME */
+.carousel {
+    width: 60%;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 10%;
+    padding: 3%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.anime h2 {
+    font-family: 'Title';
+    font-size: xx-large;
+    margin: 0%;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.anime-item {
+    width: 100%;
+    min-height: 600px;
+    margin: 1.5% 0%;
+    padding: 0% 5%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.anime-item img{
+    width: 100%;
+    min-height: 600px;
+    margin: 3% 0%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.anime-item h3{
+    font-family:'Subtitle';
+    font-size: xx-large;
+    color:#ffffff
+}
+
+.anime-item p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    color: #ffffff;
+}
+
+.anime-container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-nav {
+    display: flex;
+    justify-self: center;
+
+    max-width: 85%;
+    padding-left: 7.5%;
+    margin: 2% 0%;
+    overflow: hidden;
+}
+
+.slider-for .anime-item img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-nav .anime-miniature img {
+    width: 145px;
+    height: 145px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 0 10px;
+}
